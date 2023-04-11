@@ -1,0 +1,49 @@
+@import "./colors.module.scss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+.steps {
+  display: flex;
+  align-items: center;
+  width: 13rem;
+  height: 3.5rem;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+
+  &__left {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid $sidebar-text-color;
+    color: $sidebar-text-color;
+
+    &:hover {
+      background: $sidebar-text-color;
+      color: black;
+    }
+    &:active {
+      background: $sidebar-text-color;
+      color: black;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Quicksand;
+    font-size: 17px;
+    line-height: 23px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &__top {
+      color: #9790ff;
+    }
+    &__bottom {
+      color: white;
+    }
+  }
+}

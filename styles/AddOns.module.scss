@@ -1,0 +1,45 @@
+@import './colors.module.scss';
+.AddOns{
+  width: 100%;
+  height: 753px;
+  padding: 1.5rem 5rem 1.4rem 5rem;
+  position: relative;
+
+
+  &__label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(128, 128, 128, 0.566);
+    width: 100%;
+    padding: 25px 40px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.224);
+    cursor: pointer;
+    margin-bottom: 1.8rem;
+
+    &__left{
+      display: flex;
+      gap: 1.5rem;
+
+      h2{
+        padding-bottom: 5px;
+        font-size: 25px;
+      }
+      
+      p{
+        font-weight: 600;
+        font-size: 16px;
+        color: gray;
+      }
+    }
+
+   
+
+    &__price{
+      color: $primary-color;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

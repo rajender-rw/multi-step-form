@@ -1,0 +1,23 @@
+$bgColor : #EEF5FF;
+
+.home{
+  width: 100%;
+  height: 100vh;
+  background-color:$bgColor;
+  display:grid;
+  place-items: center;
+}
+
+.home_container{
+  width: 100%;
+  max-width: 1170px;
+  height: 807px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+}

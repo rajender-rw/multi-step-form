@@ -1,0 +1,35 @@
+$bgcolor: #493eff;
+
+.sidebar {
+  width: 100%;
+  max-width: 352px;
+  height: 753px;
+  background-color: #493eff;
+  border-radius: 20px;
+  position: relative;
+  padding: 3rem 2rem;
+
+  &__vector1 {
+    width: 232px;
+    height: 274.19px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__vector2 {
+    width: 214.49px;
+    height: 174.88px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  
+  &__vector3 {
+    width: auto;
+    height: 127px;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+  }
+}
