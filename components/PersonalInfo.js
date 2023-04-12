@@ -28,7 +28,7 @@ const inputData = [
   },
 ];
 
-const PersonalInfo = ({ activeIndex , setActiveIndex }) => {
+const PersonalInfo = ({ activeIndex, setActiveIndex }) => {
   return (
     <div className={styles.personalInfo}>
       <InfoTitle
@@ -46,7 +46,12 @@ const PersonalInfo = ({ activeIndex , setActiveIndex }) => {
         />
       ))}
 
-      <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Next Step"} />
+      <Button
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        text1={"Back"}
+        text2={"Next Step"}
+      />
     </div>
   );
 };

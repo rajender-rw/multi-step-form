@@ -11,7 +11,7 @@ import Address from "@/components/SelectPlans";
 import AddOns from "@/components/AddOns";
 import Summary from "@/components/Summary";
 
-const Sidebar = ({ activeForm }) => {
+const Sidebar = ({ activeIndex, setActiveIndex }) => {
   const stepsData = [
     {
       id: 0,
@@ -43,20 +43,22 @@ const Sidebar = ({ activeForm }) => {
     <div className={styles.sidebar}>
       {stepsData.map((i, index) => (
         <Steps
-          active1={activeForm == index}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
           key={i.id + 1}
           id={i.id + 1}
           title={i.title}
           heading={i.heading}
           comp={i.comp}
+          index={index}
         />
       ))}
 
-      <Image className={styles.sidebar__vector1} src={vector1} alt="vector1" />
+      <Image className={styles.sidebar__vectorblue} src={vector1} alt="vector1" />
 
-      <Image className={styles.sidebar__vector2} src={vector2} alt="vector2" />
+      <Image className={styles.sidebar__vectorpink} src={vector2} alt="vector2" />
 
-      <Image className={styles.sidebar__vector3} src={vector3} alt="vector3" />
+      <Image className={styles.sidebar__vectororange} src={vector3} alt="vector3" />
     </div>
   );
 };

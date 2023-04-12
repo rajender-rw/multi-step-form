@@ -1,14 +1,14 @@
-$bgColor : #EEF5FF;
+$bgColor: #eef5ff;
 
-.home{
+.home {
   width: 100%;
   height: 100vh;
-  background-color:$bgColor;
-  display:grid;
+  background-color: $bgColor;
+  display: grid;
   place-items: center;
 }
 
-.home_container{
+.home_container {
   width: 100%;
   max-width: 1170px;
   height: 807px;
@@ -20,5 +20,4 @@ $bgColor : #EEF5FF;
   display: flex;
   align-items: center;
   position: relative;
-
 }

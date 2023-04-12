@@ -4,7 +4,6 @@ import styles from "@/styles/Button.module.scss";
 const Button = ({ text1, text2, activeIndex, setActiveIndex }) => {
   return (
     <div className={styles.button}>
-
       <button
         type="button"
         className={styles.button__btn1}

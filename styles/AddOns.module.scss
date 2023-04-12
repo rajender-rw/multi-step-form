@@ -1,12 +1,12 @@
-@import './colors.module.scss';
-.AddOns{
+@import "./colors.module.scss";
+
+.AddOns {
   width: 100%;
   height: 753px;
   padding: 1.5rem 5rem 1.4rem 5rem;
   position: relative;
 
-
-  &__label{
+  &__label {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,37 +19,57 @@
     cursor: pointer;
     margin-bottom: 1.5rem;
 
-    &__left{
+    &__left {
       display: flex;
       align-items: center;
       gap: 1.5rem;
 
-      input[type="checkbox"]{
-          width: 30px;
-          height: 30px;
-          cursor: pointer;
+      input[type="checkbox"] {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border: 2px solid rgba(0, 0, 0, 0.205);
+        outline: none;
+        position: relative;
       }
 
-      input:checked[type="checkbox"]{
-          background: #473DFF;
+      input:checked[type="checkbox"] {
+        background: #473dff;
       }
 
-      h2{
-        padding-bottom: 5px;
-        font-size: 25px;
+      input:checked[type="checkbox"] + section {
+        border: 2px solid #473dff;
       }
       
-      p{
+      input[type="checkbox"]:before {
+        content: "✔";
+        position: absolute;
+        background-color: white;
+        visibility: hidden;
+        padding: 6px 9px;
+        border-radius: 1px ;
+      }
+    
+      input:checked[type="checkbox"]:before {
+        visibility: visible;
+        background: #473dff;
+        color: white;
+      }
+
+      h2 {
+        padding-bottom: 5px;
+        font-size: 23px;
+      }
+
+      p {
         font-weight: 600;
         font-size: 16px;
         color: gray;
       }
     }
 
-   
-
-    &__price{
-      color: $primary-color;
+    &__price {
+      color: #473dff;
       font-size: 20px;
       font-weight: 600;
     }

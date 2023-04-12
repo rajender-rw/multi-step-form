@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <section className={styles.home}>
         <div className={styles.home_container}>
-          <Sidebar activeForm={activeIndex} />
+          <Sidebar activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
 
           {activeIndex === 0 && (
             <PersonalInfo
@@ -39,7 +39,7 @@ export default function Home() {
           {activeIndex === 2 && (
             <AddOns activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
           )}
-          
+
           {activeIndex === 3 && (
             <Summary
               activeIndex={activeIndex}

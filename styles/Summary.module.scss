@@ -6,12 +6,12 @@
   padding: 1.5rem 5rem 1.4rem 5rem;
   position: relative;
 
-
   .Summary_cont {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+
   &__top {
     background-color: rgba(128, 128, 128, 0.085);
     width: 100%;
@@ -55,7 +55,6 @@
     padding: 0 14px;
   }
 
-  
   &__price {
     color: lighten($primary-color, 40);
     font-size: 30px;

@@ -24,7 +24,7 @@ const addOnData = [
   },
 ];
 
-const AddOns = ({ activeIndex , setActiveIndex  }) => {
+const AddOns = ({ activeIndex, setActiveIndex }) => {
   return (
     <div className={styles.AddOns}>
       <InfoTitle
@@ -33,19 +33,25 @@ const AddOns = ({ activeIndex , setActiveIndex  }) => {
       />
 
       {addOnData.map((i) => (
-        <label htmlFor="Online Service" className={styles.AddOns__label}>
+        <section  className={styles.AddOns__label}>
           <div className={styles.AddOns__label__left}>
-            <input type="checkbox" />
+            <input id="Online Service" name="Online Service" type="checkbox" />
+            <label htmlFor="Online Service"></label>
             <div className={styles.AddOns__label__text}>
               <h2>{i.heading}</h2>
               <p>{i.para}</p>
             </div>
           </div>
           <p className={styles.AddOns__label__price}>{i.price}</p>
-        </label>
+        </section>
       ))}
 
-      <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Next Step"} />
+      <Button
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        text1={"Back"}
+        text2={"Next Step"}
+      />
     </div>
   );
 };

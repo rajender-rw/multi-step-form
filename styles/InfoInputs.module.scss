@@ -11,7 +11,7 @@
     margin-bottom: 1rem;
     color: $primary-color;
   }
-  
+
   &__type {
     border: 1px solid $secondry-color;
     border-radius: 5px;
@@ -23,7 +23,7 @@
     font-weight: 600;
     color: #02295a;
 
-    &:focus{
+    &:focus {
       border-color: #473dff;
     }
 
@@ -34,4 +34,3 @@
     }
   }
 }
-

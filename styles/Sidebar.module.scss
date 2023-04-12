@@ -9,7 +9,7 @@ $bgcolor: #493eff;
   position: relative;
   padding: 3rem 2rem;
 
-  &__vector1 {
+  &__vectorblue {
     width: 232px;
     height: 274.19px;
     position: absolute;
@@ -17,15 +17,15 @@ $bgcolor: #493eff;
     left: 0;
   }
 
-  &__vector2 {
+  &__vectorpink {
     width: 214.49px;
     height: 174.88px;
     position: absolute;
     bottom: 0;
     right: 0;
   }
-  
-  &__vector3 {
+
+  &__vectororange {
     width: auto;
     height: 127px;
     position: absolute;
