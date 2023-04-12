@@ -8,7 +8,7 @@ import card2 from "../public/Assets/card2.svg";
 import card3 from "../public/Assets/card3.svg";
 import Image from "next/image";
 
-const SelectPlans = ({ onShow }) => {
+const SelectPlans = ({  activeIndex , setActiveIndex }) => {
   return (
     <div>
       <div className={styles.selectplans}>
@@ -18,29 +18,32 @@ const SelectPlans = ({ onShow }) => {
         />
 
         <section className={styles.selectplans__cardSection}>
-          <div className={styles.selectplans__card}>
+          <label className={styles.selectplans__card}>
+            <input type="checkbox" hidden />
             <Image width={50} src={card1} alt="card" />
             <div className={styles.selectplans__cardText}>
               <p className={styles.selectplans__cardText__Top}>Arcade</p>
               <p>$9/mo</p>
             </div>
-          </div>
+          </label>
 
-          <div className={styles.selectplans__card}>
+          <label className={styles.selectplans__card}>
+            <input type="checkbox" hidden />
             <Image width={50} src={card2} alt="card" />
             <div className={styles.selectplans__cardText}>
               <p className={styles.selectplans__cardText__Top}>Advanced</p>
               <p>$12/mo</p>
             </div>
-          </div>
+          </label>
 
-          <div className={styles.selectplans__card}>
+          <label className={styles.selectplans__card}>
+            <input type="checkbox" hidden />
             <Image width={50} src={card3} alt="card" />
             <div className={styles.selectplans__cardText}>
               <p className={styles.selectplans__cardText__Top}>Pro</p>
               <p>$15/mo</p>
             </div>
-          </div>
+          </label>
         </section>
 
         <section className={styles.selectplans__checkbox}>
@@ -49,7 +52,7 @@ const SelectPlans = ({ onShow }) => {
           <span>Yearly</span>
         </section>
 
-        <Button onShow={onShow} text1={"Back"} text2={"Next Step"} />
+        <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Next Step"} />
       </div>
     </div>
   );

@@ -24,7 +24,7 @@ const addOnData = [
   },
 ];
 
-const AddOns = ({ onShow }) => {
+const AddOns = ({ activeIndex , setActiveIndex  }) => {
   return (
     <div className={styles.AddOns}>
       <InfoTitle
@@ -45,7 +45,7 @@ const AddOns = ({ onShow }) => {
         </label>
       ))}
 
-      <Button onShow={onShow} text1={"Back"} text2={"Next Step"} />
+      <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Next Step"} />
     </div>
   );
 };

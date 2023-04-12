@@ -28,7 +28,7 @@ const inputData = [
   },
 ];
 
-const PersonalInfo = ({ onShow }) => {
+const PersonalInfo = ({ activeIndex , setActiveIndex }) => {
   return (
     <div className={styles.personalInfo}>
       <InfoTitle
@@ -46,7 +46,7 @@ const PersonalInfo = ({ onShow }) => {
         />
       ))}
 
-      <Button onShow={onShow} text1={"Back"} text2={"Next Step"} />
+      <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Next Step"} />
     </div>
   );
 };

@@ -2,11 +2,10 @@
 
 .button {
   width: 100%;
-  position: fixed;
-  bottom: 6.8rem;
-  left: 11.2rem;
+  position: absolute;
+  bottom: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15rem;
 
   &__btn1 {
@@ -22,6 +21,7 @@
     margin-top: 4rem;
     outline: none;
     border: none;
+    cursor: pointer;
     
     &:hover {
       background-color: rgba(128, 128, 128, 0.261);
@@ -41,6 +41,7 @@
     outline: none;
     margin-top: 4rem;
     border: none;
+    cursor: pointer;
     
     &:hover {
       background-color: lighten($button-color, 7);

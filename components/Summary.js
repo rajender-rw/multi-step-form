@@ -3,7 +3,7 @@ import styles from "@/styles/Summary.module.scss";
 import Button from "./Button";
 import InfoTitle from "./InfoTitle";
 
-const Summary = ({ onShow }) => {
+const Summary = ({  activeIndex , setActiveIndex }) => {
   return (
     <div className={styles.Summary}>
       <InfoTitle
@@ -41,7 +41,7 @@ const Summary = ({ onShow }) => {
         </div>
       </section>
 
-      <Button onShow={onShow} text1={"Back"} text2={"Confirm"} />
+      <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Confirm"} />
     </div>
   );
 };

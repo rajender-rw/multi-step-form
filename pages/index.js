@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Sidebar from "@/components/Sidebar";
 import PersonalInfo from "@/components/PersonalInfo";
@@ -8,10 +7,7 @@ import { useState } from "react";
 import AddOns from "@/components/AddOns";
 import Summary from "@/components/Summary";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -25,32 +21,31 @@ export default function Home() {
       <section className={styles.home}>
         <div className={styles.home_container}>
           <Sidebar activeForm={activeIndex} />
+
+          {activeIndex === 0 && (
+            <PersonalInfo
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          )}
+
+          {activeIndex === 1 && (
+            <SelectPlans
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          )}
+
+          {activeIndex === 2 && (
+            <AddOns activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+          )}
           
-          {activeIndex === 0 ? <PersonalInfo
-            isActive={activeIndex === 0}
-            onShow={() => {
-              setActiveIndex(1);
-            }}
-          /> : ""}
-
-          {activeIndex === 1 ? <SelectPlans
-            onShow={() => {
-              setActiveIndex(2);
-            }}
-          /> : ""}
-
-          {activeIndex === 2 ? <AddOns
-            onShow={() => {
-              setActiveIndex(3);
-            }}
-          /> : ""}
-
-          {activeIndex === 3 ? <Summary
-            onShow={() => {
-              setActiveIndex(0);
-            }}
-          /> : ""}
-
+          {activeIndex === 3 && (
+            <Summary
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          )}
         </div>
       </section>
     </>

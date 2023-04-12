@@ -13,14 +13,26 @@
     border: 1px solid rgba(128, 128, 128, 0.566);
     width: 100%;
     padding: 25px 40px;
-    border-radius: 6px;
+    border-radius: 0.5rem;
+    height: 6.6rem;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.224);
     cursor: pointer;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.5rem;
 
     &__left{
       display: flex;
+      align-items: center;
       gap: 1.5rem;
+
+      input[type="checkbox"]{
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+      }
+
+      input:checked[type="checkbox"]{
+          background: #473DFF;
+      }
 
       h2{
         padding-bottom: 5px;
