@@ -13,7 +13,7 @@ const Inputs = ({ label, type, placeholder, required }) => {
   };
   return (
     <>
-      <form className={styles.input} onSubmit={handleSubmit}>
+      <div className={styles.input} onSubmit={handleSubmit}>
         {type == "textarea" ? (
           <textarea name="" id="" cols="30" rows="10"></textarea>
         ) : (
@@ -31,7 +31,7 @@ const Inputs = ({ label, type, placeholder, required }) => {
             />
           </>
         )}
-      </form>
+      </div>
     </>
   );
 };

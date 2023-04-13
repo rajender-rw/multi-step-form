@@ -6,6 +6,7 @@ import SelectPlans from "@/components/SelectPlans";
 import { useState } from "react";
 import AddOns from "@/components/AddOns";
 import Summary from "@/components/Summary";
+import ConfirmPage from "@/components/ConfirmPage";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -43,6 +44,13 @@ export default function Home() {
 
           {activeIndex === 3 && (
             <Summary
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          )}
+
+          {activeIndex === 4 && (
+            <ConfirmPage
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
             />

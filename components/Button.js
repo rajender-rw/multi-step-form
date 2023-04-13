@@ -18,7 +18,7 @@ const Button = ({ text1, text2, activeIndex, setActiveIndex }) => {
       <button
         type="button"
         className={styles.button__btn2}
-        disabled={activeIndex == 3}
+        disabled={activeIndex == 4}
         onClick={() => {
           setActiveIndex(activeIndex + 1);
         }}
