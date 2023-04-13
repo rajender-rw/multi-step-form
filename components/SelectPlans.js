@@ -8,7 +8,27 @@ import card2 from "../public/Assets/card2.svg";
 import card3 from "../public/Assets/card3.svg";
 import Image from "next/image";
 
-const SelectPlans = ({  activeIndex , setActiveIndex }) => {
+const cardData = [
+  {
+    id: 1,
+    img: card1,
+    title: "Arcade",
+    price: "$12/mo",
+  },
+  {
+    id: 2,
+    img: card2,
+    title: "Advanced",
+    price: "$20/mo",
+  },
+  {
+    id: 3,
+    img: card3,
+    title: "Pro",
+    price: "$22/mo",
+  },
+];
+const SelectPlans = ({ activeIndex, setActiveIndex }) => {
   return (
     <div>
       <div className={styles.selectplans}>
@@ -18,41 +38,32 @@ const SelectPlans = ({  activeIndex , setActiveIndex }) => {
         />
 
         <section className={styles.selectplans__cardSection}>
-          <label className={styles.selectplans__card}>
-            <input type="checkbox" hidden />
-            <Image width={50} src={card1} alt="card" />
-            <div className={styles.selectplans__cardText}>
-              <p className={styles.selectplans__cardText__Top}>Arcade</p>
-              <p>$9/mo</p>
-            </div>
-          </label>
-
-          <label className={styles.selectplans__card}>
-            <input type="checkbox" hidden />
-            <Image width={50} src={card2} alt="card" />
-            <div className={styles.selectplans__cardText}>
-              <p className={styles.selectplans__cardText__Top}>Advanced</p>
-              <p>$12/mo</p>
-            </div>
-          </label>
-
-          <label className={styles.selectplans__card}>
-            <input type="checkbox" hidden />
-            <Image width={50} src={card3} alt="card" />
-            <div className={styles.selectplans__cardText}>
-              <p className={styles.selectplans__cardText__Top}>Pro</p>
-              <p>$15/mo</p>
-            </div>
-          </label>
+          {cardData.map((i,index) => (
+            <>
+              <input type="radio" id={`card-${index}`} name="cards"/>
+              <label htmlFor={`card-${index}`} className={styles.selectplans__card}>
+                <Image width={50} src={i.img} alt="card" />
+                <div className={styles.selectplans__cardText}>
+                  <p className={styles.selectplans__cardText__Top}>{i.title}</p>
+                  <p>{i.price}</p>
+                </div>
+              </label>
+            </>
+          ))}
         </section>
 
         <section className={styles.selectplans__checkbox}>
-          <span>Monthly</span>
-          <input type="checkbox" />
-          <span>Yearly</span>
+          <label htmlFor="plan">Monthly</label>
+          <input id="plan" name="plan" type="checkbox" />
+          <label htmlFor="plan">Yearly</label>
         </section>
 
-        <Button activeIndex={activeIndex} setActiveIndex={setActiveIndex} text1={"Back"} text2={"Next Step"} />
+        <Button
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          text1={"Back"}
+          text2={"Next Step"}
+        />
       </div>
     </div>
   );

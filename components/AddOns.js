@@ -32,18 +32,20 @@ const AddOns = ({ activeIndex, setActiveIndex }) => {
         desc={"Add-ons help enhance your gaming experience"}
       />
 
-      {addOnData.map((i) => (
-        <section  className={styles.AddOns__label}>
-          <div className={styles.AddOns__label__left}>
-            <input id="Online Service" name="Online Service" type="checkbox" />
-            <label htmlFor="Online Service"></label>
-            <div className={styles.AddOns__label__text}>
-              <h2>{i.heading}</h2>
-              <p>{i.para}</p>
+      {addOnData.map((i, index) => (
+        <div>
+        {console.log(index)}
+          <input id={`onlineservice-${index}`} name={`onlineservice`} type="checkbox" />
+          <label htmlFor={`onlineservice-${index}`}  className={styles.AddOns__label}>
+            <div className={styles.AddOns__label__left}>
+              <div className={styles.AddOns__label__text}>
+                <h2>{i.heading}</h2>
+                <p>{i.para}</p>
+              </div>
             </div>
-          </div>
-          <p className={styles.AddOns__label__price}>{i.price}</p>
-        </section>
+            <p className={styles.AddOns__label__price}>{i.price}</p>
+          </label>
+        </div>
       ))}
 
       <Button
@@ -57,3 +59,19 @@ const AddOns = ({ activeIndex, setActiveIndex }) => {
 };
 
 export default AddOns;
+
+{
+  /* {addOnData.map((i) => (
+        <section className={styles.AddOns__label}>
+          <div className={styles.AddOns__label__left}>
+            <input id="Online Service" name="Online Service" type="checkbox" />
+            <label htmlFor="Online Service"></label>
+            <div className={styles.AddOns__label__text}>
+              <h2>{i.heading}</h2>
+              <p>{i.para}</p>
+            </div>
+          </div>
+          <p className={styles.AddOns__label__price}>{i.price}</p>
+        </section>
+      ))} */
+}

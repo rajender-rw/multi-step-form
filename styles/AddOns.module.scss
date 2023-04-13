@@ -18,43 +18,13 @@
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.224);
     cursor: pointer;
     margin-bottom: 1.5rem;
+    position: relative;
+    
 
     &__left {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-
-      input[type="checkbox"] {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        border: 2px solid rgba(0, 0, 0, 0.205);
-        outline: none;
-        position: relative;
-      }
-
-      input:checked[type="checkbox"] {
-        background: #473dff;
-      }
-
-      input:checked[type="checkbox"] + section {
-        border: 2px solid #473dff;
-      }
-      
-      input[type="checkbox"]:before {
-        content: "✔";
-        position: absolute;
-        background-color: white;
-        visibility: hidden;
-        padding: 6px 9px;
-        border-radius: 1px ;
-      }
-    
-      input:checked[type="checkbox"]:before {
-        visibility: visible;
-        background: #473dff;
-        color: white;
-      }
 
       h2 {
         padding-bottom: 5px;
@@ -73,5 +43,39 @@
       font-size: 20px;
       font-weight: 600;
     }
+  }
+
+  input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.205);
+    outline: none;
+    position: relative;
+    display: none;
+  }
+
+  input[type="checkbox"]:before {
+    content: "✔";
+    position: absolute;
+    background-color: white;
+    visibility: hidden;
+    padding: 6px 9px;
+    border-radius: 1px;
+  }
+
+  input:checked[type="checkbox"]:before {
+    visibility: visible;
+    background: #473dff;
+    color: white;
+  }
+
+  input:checked[type="checkbox"] {
+    background: #473dff;
+  }
+
+  input:checked[type="checkbox"] + label {
+    background: #fafbff;
+    border: 1px solid #473dff;
   }
 }

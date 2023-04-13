@@ -10,6 +10,7 @@ import Summary from "@/components/Summary";
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+
   return (
     <>
       <Head>

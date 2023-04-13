@@ -44,6 +44,7 @@
     appearance: none;
     -webkit-appearance: none;
     background-color: #02295a;
+    // display: none;
 
     border-radius: 20px;
     outline: none;
@@ -98,7 +99,26 @@
     font-family: Quicksand;
     font-weight: 700;
     font-size: 1.4rem;
-    padding: 0.6rem;
+    padding: 0.6rem;        
     gap: 20px;
   }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input:checked[type="radio"] + label {
+    background: #fafbff;
+    border: 1px solid #473dff;
+  }
+
+  input[type="checkbox"] + label{
+    color:gray;
+  }
+  
+  input:checked[type="checkbox"] + label {
+    color: black;
+  }
+
+
 }
